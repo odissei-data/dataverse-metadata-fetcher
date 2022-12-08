@@ -7,6 +7,6 @@ class DataverseInformation(BaseModel):
 
 
 class FetcherInput(BaseModel):
-    pid: str = Field(example="doi:10.5072/FK2/1YCZOL")
+    doi: str = Field(example="doi:10.5072/FK2/1YCZOL")
     metadata_format: str = Field(example="dataverse_json")
     dataverse_information: DataverseInformation
