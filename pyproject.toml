@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dataverse-metadata-fetcher"
-version = "0.1.0"
+version = "0.1.1"
 description = "A project allowing one to set up a FastAPI based Microservice, using cookiecutter"
 authors = ["Thomas van Erven"]
 
