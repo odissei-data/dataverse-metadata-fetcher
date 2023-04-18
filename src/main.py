@@ -15,10 +15,9 @@ async def info():
 
 @app.post('/dataverse-metadata-fetcher', tags=['Dataverse metadata fetcher'])
 async def dataverse_metadata_fetcher(fetcher_input: FetcherInput):
-    url = f'{fetcher_input.dataverse_information.base_url}' \
+    url = f'{fetcher_input.base_url}' \
           f'/api/datasets/export?exporter={fetcher_input.metadata_format}' \
           f'&persistentId={fetcher_input.doi}'
-    print(url)
     response = requests.get(url)
     if not response.ok:
         raise HTTPException(status_code=response.status_code,
